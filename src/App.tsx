@@ -29,7 +29,7 @@ function App() {
 		<div className="min-h-screen bg-white">
 			{/* Header */}
 			<header className="border-b border-gray-100">
-				<div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
 					<div className="flex items-center space-x-2">
 						<Shield className="w-8 h-8 text-red-500" />
 						<span className="text-2xl font-bold text-gray-900">ratelite</span>
@@ -61,7 +61,7 @@ function App() {
 			</header>
 
 			{/* Hero Section */}
-			<section className="py-20 px-6">
+			<section className="py-20 px-4 sm:px-6">
 				<div className="max-w-4xl mx-auto text-center">
 					<div className="inline-flex items-center space-x-2 bg-red-50 text-red-600 px-4 py-2 rounded-full text-sm font-medium mb-6">
 						<Zap className="w-4 h-4" />
@@ -91,7 +91,7 @@ function App() {
 			</section>
 
 			{/* Features Section */}
-			<section className="py-20 px-6 bg-gray-50">
+			<section className="py-20 px-4 sm:px-6 bg-gray-50">
 				<div className="max-w-6xl mx-auto">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -101,7 +101,7 @@ function App() {
 							Built for modern applications with Redis reliability
 						</p>
 					</div>
-					<div className="grid md:grid-cols-4 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 						<div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
 							<div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-6">
 								<Zap className="w-6 h-6 text-red-500" />
@@ -151,7 +151,7 @@ function App() {
 			</section>
 
 			{/* Code Example Section */}
-			<section className="py-20 px-6">
+			<section className="py-20 px-4 sm:px-6">
 				<div className="max-w-4xl mx-auto">
 					<div className="text-center mb-12">
 						<h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -161,7 +161,7 @@ function App() {
 							Simple setup with Upstash Redis
 						</p>
 					</div>
-					<div className="bg-gray-900 rounded-2xl p-8 text-white overflow-x-auto">
+					<div className="bg-gray-900 rounded-2xl p-4 sm:p-8 text-white overflow-x-auto">
 						<div className="flex items-center justify-between mb-6">
 							<div className="flex items-center space-x-2">
 								<Code className="w-5 h-5 text-red-400" />
@@ -238,7 +238,7 @@ app.listen(3000, () => {
 			</section>
 
 			{/* CTA Section */}
-			<section className="py-20 px-6 bg-red-500">
+			<section className="py-20 px-4 sm:px-6 bg-red-500">
 				<div className="max-w-4xl mx-auto text-center">
 					<h2 className="text-4xl font-bold text-white mb-6">
 						Ready to Protect Your API?
@@ -264,8 +264,8 @@ app.listen(3000, () => {
 			</section>
 
 			{/* Footer */}
-			<footer className="py-12 px-6 border-t border-gray-100">
-				<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+			<footer className="py-12 px-4 sm:px-6 border-t border-gray-100">
+				<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
 					<div className="flex items-center space-x-2 mb-4 md:mb-0">
 						<Shield className="w-6 h-6 text-red-500" />
 						<span className="text-xl font-bold text-gray-900">ratelite</span>
@@ -299,7 +299,7 @@ app.listen(3000, () => {
 		<div className="min-h-screen bg-white">
 			{/* Header */}
 			<header className="border-b border-gray-100 sticky top-0 bg-white z-50">
-				<div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
 					<div className="flex items-center space-x-4">
 						<button
 							onClick={() => setCurrentPage("home")}
@@ -334,11 +334,11 @@ app.listen(3000, () => {
 				</div>
 			</header>
 
-			<div className="max-w-6xl mx-auto px-6 py-12 flex gap-12">
+			<div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 flex flex-col lg:flex-row gap-8 lg:gap-12 overflow-x-hidden">
 				{/* Sidebar */}
-				<aside className="w-64 flex-shrink-0">
+				<aside className="hidden lg:block w-full lg:w-64 flex-shrink-0 mb-8 lg:mb-0">
 					<nav className="sticky top-24">
-						<div className="space-y-1">
+						<div className="space-y-1 flex flex-row lg:flex-col gap-2 lg:gap-0 overflow-x-auto lg:overflow-visible">
 							<a
 								href="#overview"
 								className="block px-3 py-2 text-sm text-red-600 bg-red-50 rounded-lg font-medium"
@@ -386,7 +386,7 @@ app.listen(3000, () => {
 				</aside>
 
 				{/* Main Content */}
-				<main className="flex-1 max-w-none">
+				<main className="flex-1 max-w-none w-full">
 					<div className="prose prose-gray max-w-none">
 						{/* Overview */}
 						<section
@@ -586,7 +586,7 @@ app.listen(3000, () => {
 							</p>
 
 							<div className="overflow-x-auto">
-								<table className="w-full border border-gray-200 rounded-xl overflow-hidden">
+								<table className="w-full min-w-[600px] border border-gray-200 rounded-xl overflow-hidden text-sm">
 									<thead className="bg-gray-50">
 										<tr>
 											<th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
@@ -724,7 +724,7 @@ app.listen(3000, () => {
 								use a different identifier, such as an API key or user ID.
 							</p>
 
-							<div className="bg-gray-900 rounded-xl p-6 relative">
+							<div className="bg-gray-900 rounded-xl p-6 relative overflow-x-auto">
 								<button
 									onClick={() =>
 										copyToClipboard(
@@ -746,7 +746,7 @@ app.listen(3000, () => {
 										{copiedCode === "customkey" ? "Copied!" : "Copy"}
 									</span>
 								</button>
-								<pre className="text-white text-sm leading-relaxed">
+								<pre className="text-white text-sm leading-relaxed min-w-0 break-words whitespace-pre overflow-x-auto">
 									{`const rateLimiter = createRateLimiter({
 	// ... other options
 	keyFn: (req) => req.headers["x-api-key"] as string,
@@ -800,8 +800,8 @@ app.listen(3000, () => {
 			</div>
 
 			{/* Footer */}
-			<footer className="py-12 px-6 border-t border-gray-100 bg-gray-50">
-				<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+			<footer className="py-12 px-4 sm:px-6 border-t border-gray-100 bg-gray-50">
+				<div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
 					<div className="flex items-center space-x-2 mb-4 md:mb-0">
 						<Shield className="w-6 h-6 text-red-500" />
 						<span className="text-xl font-bold text-gray-900">ratelite</span>
